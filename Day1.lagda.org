@@ -13,3 +13,11 @@ Square p q r s = PathP (λ i → p i ≡ q i) r s
 - in the early days of type theory, researchers wanted to create a "Universal Type"
 - the type contain all other types and including itself like Type : Type.
 - girard prove that Universal Type lead logical explosion
+** agda use "Levels" for make code reusable across different levels
+** what ℓ represents
+- ℓ is a parameter of type Level1
+- When you see ∀ {ℓ} → ... it means "for any level ℓ."
+- Set ℓ refers to universe at level ℓ.
+- By including {ℓ} in your Square definition, This means your Square definition can work for any type A
+- regardless of which universe level A lives in.
+- making the Square type polymorphic
