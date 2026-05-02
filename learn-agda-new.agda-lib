@@ -1,0 +1,3 @@
+name: learn-agda-new
+include: .
+depend: cubical
