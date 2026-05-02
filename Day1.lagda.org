@@ -8,3 +8,8 @@ Square : ∀ {ℓ} {A : Set ℓ} {x0 x1 y0 y1 : A} →
            x0 ≡ x1 → y0 ≡ y1 → x0 ≡ y0 → x1 ≡ y1 → Set ℓ
 Square p q r s = PathP (λ i → p i ≡ q i) r s
 #+end_src
+** Girard's Paradox is type theoretic version of Russell's Paradox
+*** core concept
+- in the early days of type theory, researchers wanted to create a "Universal Type"
+- the type contain all other types and including itself like Type : Type.
+- girard prove that Universal Type lead logical explosion
