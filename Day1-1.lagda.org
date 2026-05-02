@@ -13,9 +13,9 @@ cong f p i = f (p i)
 #+end_src
 ** sym that is just revert path
 ** congruence
-f : (a : A) → B a: this is a dependent function.
-for every element a in type A it return a value in the type B a.
-path between f x and f y by PathP (λ i → B (p i)) becasue p i0 is x and p i1 is y
-and f p i = f (p i)
-when f p 0 then f (p 0) and then f x by PathP (λ i → B (p i))
-when f p 1 then f (p 1) and then f y by PathP (λ i → B (p i))
+- f : (a : A) → B a: this is a dependent function.
+- for every element a in type A it return a value in the type B a.
+- path between f x and f y by PathP (λ i → B (p i)) becasue p i0 is x and p i1 is y
+- and f p i = f (p i)
+- when f p 0 then f (p 0) and then f x by PathP (λ i → B (p i))
+- when f p 1 then f (p 1) and then f y by PathP (λ i → B (p i))
