@@ -1,0 +1,6 @@
+#+title: Readme
+
+* learn-agda-new
+- read https://agda.readthedocs.io/en/latest/language/cubical.html#introduction
+- use lagda.org
+- 👋
