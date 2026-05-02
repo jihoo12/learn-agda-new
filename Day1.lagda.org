@@ -41,9 +41,3 @@ Square p q r s = PathP (λ i → p i ≡ q i) r s
 - λ i → p i ≡ q i
 - at i = 0 the type is p 0 ≡ q 0, which is exactly x0 ≡ y0
 - at i = 1 the type is p 1 ≡ q 1, which is exactly x1 ≡ y1
-
-$$\begin{matrix}
-x0 & \xrightarrow{p} & x1 \\
-r \downarrow & & \downarrow s \\
-y0 & \xrightarrow{q} & y1
-\end{matrix}$$
