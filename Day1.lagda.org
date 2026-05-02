@@ -21,3 +21,12 @@ Square p q r s = PathP (λ i → p i ≡ q i) r s
 - By including {ℓ} in your Square definition, This means your Square definition can work for any type A
 - regardless of which universe level A lives in.
 - making the Square type polymorphic
+** Universe Polymorphism
+- In Agda the type of a normal type (like Bool or Nat) is Set.
+- However Set itself must have a type.
+- but if Set : Set then it lead logical error Girard's Paradox
+- To solve this, Agda use a sequence
+- Bool : Set0
+- Set0 : Set1
+- Set1 : set2
+- ...and so on.
