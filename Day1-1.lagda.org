@@ -11,7 +11,7 @@ cong : ∀ {ℓ} {A : Set ℓ} {x y : A} {B : A → Set ℓ} (f : (a : A) → B 
        → PathP (λ i → B (p i)) (f x) (f y)
 cong f p i = f (p i)
 #+end_src
-** sym that is just revert path
+** sym that is just revert a path
 ** congruence
 - f : (a : A) → B a: this is a dependent function.
 - for every element a in type A it return a value in the type B a.
