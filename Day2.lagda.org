@@ -1,0 +1,29 @@
+#+title: Day2
+#+begin_src agda2
+{-# OPTIONS --cubical --guardedness #-}
+module Day2 where
+open import Cubical.Core.Primitives
+open import Cubical.Core.Glue
+open import Day1-1
+refl : ∀ {ℓ} {A : Set ℓ} {x : A} → Path A x x
+refl {x = x} = λ i → x
+symInv : ∀ {ℓ} {A : Set ℓ} {x y : A} (p : x ≡ y) → sym (sym p) ≡ p
+symInv p = refl
+congId : ∀ {ℓ} {A : Set ℓ} {x y : A} (p : x ≡ y) → cong (λ a → a) p ≡ p
+congId p = refl
+
+congComp : ∀ {ℓ} {A B C : Set ℓ} (f : A → B) (g : B → C) {x y : A} (p : x ≡ y) →
+             cong (λ a → g (f a)) p ≡ cong g (cong f p)
+congComp f g p = refl
+#+end_src
+** symInv
+- p : x ≡ y
+- sym p : y ≡ x
+- sym sym p : x ≡ y
+** congId
+- for all A : Set ℓ, x y : A and (p : x ≡ y) and cong (λ a → a) p ≡ p
+- p ≡ p
+** congComp
+- it is congruence and composition
+- g ∘ f = g (f)
+* i'm a potato
