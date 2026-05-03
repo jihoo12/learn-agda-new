@@ -24,6 +24,7 @@ congComp f g p = refl
 - for all A : Set ℓ, x y : A and (p : x ≡ y) and cong (λ a → a) p ≡ p
 - p ≡ p
 ** congComp
-- it is congruence and composition
+- it is congruence of composition
 - g ∘ f = g (f)
 * i'm a potato
+- i can't know why that is congruence of composition
