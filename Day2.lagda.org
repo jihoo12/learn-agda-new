@@ -35,4 +35,3 @@ funExt p i x = p x i
 - ((x : A) → f x ≡ g x) is give me a rule p where,no matter which x i pick,p(x) is a path between f(x) and g(x)
 - then f ≡ g
 * i'm a potato
-- i can't know why that is congruence of composition
