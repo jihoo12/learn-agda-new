@@ -15,6 +15,10 @@ congId p = refl
 congComp : ∀ {ℓ} {A B C : Set ℓ} (f : A → B) (g : B → C) {x y : A} (p : x ≡ y) →
              cong (λ a → g (f a)) p ≡ cong g (cong f p)
 congComp f g p = refl
+
+funExt : ∀ {ℓ} {A : Set ℓ} {B : A → Set ℓ} {f g : (x : A) → B x} →
+           ((x : A) → f x ≡ g x) → f ≡ g
+funExt p i x = p x i
 #+end_src
 ** symInv
 - p : x ≡ y
@@ -26,5 +30,9 @@ congComp f g p = refl
 ** congComp
 - it is congruence of composition
 - g ∘ f = g (f)
+** function extensionality
+- {f g : (x : A) → B x} f and g take an input x of type A and return output type B
+- ((x : A) → f x ≡ g x) is give me a rule p where,no matter which x i pick,p(x) is a path between f(x) and g(x)
+- then f ≡ g
 * i'm a potato
 - i can't know why that is congruence of composition
